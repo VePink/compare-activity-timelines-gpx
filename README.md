@@ -1,2 +1,2 @@
 # compare-activity-timelines-gpx
- Tool to compare timeline of recorded activities (hiking, runing, etc.)
+PY tool to import .gpx, structurize, plot and analyze GPS logs, compare activity metrics.
