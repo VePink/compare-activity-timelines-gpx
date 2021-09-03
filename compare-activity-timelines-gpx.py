@@ -57,7 +57,7 @@ result_df['dist_cumulative_sum'] = result_df.delta_dist_km.cumsum()
 result_df['time_cumulative_sum'] = result_df.delta_time_h.cumsum()
 
 '''
-print("=================== RESULT =====================")
+print("=================== RESULT DF =====================")
 print(result_df)
 '''
 
@@ -65,12 +65,11 @@ import matplotlib.pyplot as plt
 ax = plt.gca()
 result_df.plot(kind='line',x='time_cumulative_sum',y='dist_cumulative_sum', color='blue', ax=ax)
 
-plt.scatter([38], [161]) #final point
 
 x_min = 0
-x_max = 40 #max(result_df['time_cumulative_sum'])
+x_max = max(result_df['time_cumulative_sum'])
 y_min = 0
-y_max = 161 #max(result_df['dist_cumulative_sum'])
+y_max = max(result_df['dist_cumulative_sum'])
 
 x_step = round((x_max-x_min)/20)
 y_step = round((y_max-y_min)/20)
