@@ -68,6 +68,8 @@ for activity_name in activities:
 
 df = pd.concat(li, axis=0, ignore_index=True)
 
+df = df.iloc[::50, :] #sample every n-th record to reduce points in plot and speed up analysis. Comment this line if reduction is undesirable.
+
 print('#----------- PLOT -----------#')
 import plotly.express as px
 
